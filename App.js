@@ -1,5 +1,6 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React, { Component } from 'react';
+import { StatusBar, View } from 'react-native';
 import {Text} from 'react-native';
 import Home from './components/Home'
 import Menu from './components/Menu';
@@ -34,8 +35,12 @@ class App extends Component {
   }
   render() {
     return (
+      
+       
       <NavigationContainer>
        {this.navigationDrawer()}
+       <StatusBar backgroundColor = "#4C4C4C"
+                 barStyle="light-content"/>
       </NavigationContainer>
     );
   }

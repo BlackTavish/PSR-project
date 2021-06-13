@@ -1,29 +1,31 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View } from 'react-native'
+import { Text, StyleSheet, View, ScrollView } from 'react-native'
 
 
 export default class PlayersScreen extends Component {
 
     getPlayers = () => {
-       
         return(
-            this.props.route.params.players.map((player, index) =>{
-                console.log(player);
+            this.props.route.params.players.map((player, index) =>
+            {
                 return(
                 <View key = {index}>
-                    <Text>{player.name}</Text>
-                    <Text>{player.pos}</Text>
+                    <View style = {styles.playerView}>
+                        <Text style = {styles.nameStyle}>{player.name}</Text>
+                        <Text style = {styles.positionStyle}>{player.pos}</Text>
+                    </View>
                 </View>
                 )
             })
         )
     }
-
     render() {
         return (
-            <View styles = {styles.container}>
-                {this.getPlayers()}
-            </View>
+            <ScrollView>
+                <View styles = {styles.container}>
+                    {this.getPlayers()}
+                </View>
+            </ScrollView>
         )
     }
 }
@@ -35,19 +37,20 @@ const styles = StyleSheet.create({
       },
       playerView: {
         width: '90%',
-        height: 110,
+        height: 60,
         marginLeft: 20,
         borderColor: 'black',
         borderWidth: 2,
         marginTop: 5,
-        flex: 1,
-        paddingLeft: 20,
-        alignItems:'center',
-        flexDirection:'row',
+         paddingLeft: 10,
       },
-      textStyle:{
-        fontWeight: 'bold',
-        fontSize: 14,
-        paddingLeft: 50
-      }
+      nameStyle:{
+         fontWeight: 'bold',
+         fontSize: 20,
+         
+      },
+      positionStyle:{
+          fontSize: 16,
+      },
+  
 })

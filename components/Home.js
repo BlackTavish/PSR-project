@@ -41,7 +41,7 @@ class Home extends Component{
                 <TouchableOpacity onPress={() => this.props.navigation.navigate('seriea', {leagueFlag: 'SA'})}>
                   <View style = {styles.home}>
                   <Image style = {styles.imgContainer}
-                    source = {require('../images/serieA.jpg')} />
+                    source = {require('../images/serieA.png')} />
                     <Text style = {styles.textAlign}>Serie A</Text>
                   </View>
                 </TouchableOpacity>
@@ -63,13 +63,13 @@ class Home extends Component{
                   <View style = {styles.home}>
                   <Image style = {styles.imgContainer}
                     source = {require('../images/premjerleague.png')} />
-                    <Text style = {styles.textAlign}>Premjer League</Text>
+                    <Text style = {styles.textAlign}>Premjer Liga</Text>
                   </View>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => this.props.navigation.navigate('ekstraklasa', {leagueFlag: 'POL'})}>
                   <View style = {styles.home}>
                   <Image style = {styles.imgContainer}
-                    source = {require('../images/ekstraklasa.jpg')} />
+                    source = {require('../images/ekstraklasa.png')} />
                     <Text style = {styles.textAlign}>Ekstraklasa</Text>
                   </View>
                 </TouchableOpacity>
@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
       },
       textAlign:{
         fontWeight: 'bold',
-        fontSize: 20,
+        fontSize: 22,
         paddingLeft: 70
         
       }

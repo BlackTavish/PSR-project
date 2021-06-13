@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
       },
       clubsView: {
         width: '90%',
-        height: 110,
+        height: 90,
         marginLeft: 20,
         borderColor: 'black',
         borderWidth: 2,
@@ -139,8 +139,8 @@ const styles = StyleSheet.create({
         flexDirection:'row',
       },
      imgContainer:{
-        width:90,
-        height: '90%',
+        width:70,
+        height: '80%',
         resizeMode: 'contain'
         
      },
