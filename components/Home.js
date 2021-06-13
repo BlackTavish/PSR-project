@@ -27,7 +27,7 @@ class Home extends Component{
                 <TouchableOpacity onPress={() => this.props.navigation.navigate('laliga', {leagueFlag: 'LL'})}> 
                   <View style = {styles.home}>
                   <Image style = {styles.imgContainer}
-                    source = {require('../images/laliga.png')} />
+                    source = {require('../images/LaLiga.png')} />
                     <Text style = {styles.textAlign}>La Liga</Text>
                   </View>  
                 </TouchableOpacity>
@@ -55,7 +55,7 @@ class Home extends Component{
                 <TouchableOpacity onPress={() => this.props.navigation.navigate('eredivise', {leagueFlag: 'ERV'})}>
                   <View style = {styles.home}>
                   <Image style = {styles.imgContainer}
-                    source = {require('../images/eredivise.png')} />
+                    source = {require('../images/eredivisie.png')} />
                     <Text style = {styles.textAlign}>Eredivise</Text>
                   </View>
                 </TouchableOpacity>
@@ -88,25 +88,26 @@ const styles = StyleSheet.create({
       },
       home: {
         width: '90%',
-        height: 100,
+        height: 120,
         marginLeft: 20,
         borderColor: 'black',
         borderWidth: 2,
         marginTop: 5,
         flex: 1,
-        justifyContent:'center',
+        paddingLeft: 20,
         alignItems:'center',
         flexDirection:'row',
         
       },
       imgContainer:{
-        width: 60,
-        height: 75,
+        width: 70,
+        height: 90,
         
       },
       textAlign:{
         fontWeight: 'bold',
-        paddingLeft: 20
+        fontSize: 20,
+        paddingLeft: 70
         
       }
 })

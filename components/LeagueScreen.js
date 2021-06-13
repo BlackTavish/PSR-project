@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Service from './Service'
-import {Text,View, StyleSheet, Image} from 'react-native'
+import {Text,View, StyleSheet, Image, TouchableOpacity} from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler';
 
 const service = new Service();
@@ -11,7 +11,7 @@ export default class LeagueScreen extends Component {
     constructor(props){
         super(props);
         this.state = {
-            przechowanieLig: null, 
+            saveData: null, 
             isLoading: true
         };
     }
@@ -45,61 +45,63 @@ export default class LeagueScreen extends Component {
 
     async getDataPL(){
         this.setState({
-            przechowanieLig: await service.getPremierLeague(),
+            saveData: await service.getPremierLeague(),
             isLoading: false
         })     
     }
     async getDataLL(){
         this.setState({
-            przechowanieLig: await service.getLaLiga(),
+            saveData: await service.getLaLiga(),
             isLoading: false
         })     
     }
     async getDataBUN(){
         this.setState({
-            przechowanieLig: await service.getBundesliga(),
+            saveData: await service.getBundesliga(),
             isLoading: false
         })     
     }
     async getDataSA(){
         this.setState({
-            przechowanieLig: await service.getSerieA(),
+            saveData: await service.getSerieA(),
             isLoading: false
         })     
     }
     async getDataL1(){
         this.setState({
-            przechowanieLig: await service.getLigue1(),
+            saveData: await service.getLigue1(),
             isLoading: false
         })     
     }
     async getDataERV(){
         this.setState({
-            przechowanieLig: await service.getEredivise(),
+            saveData: await service.getEredivise(),
             isLoading: false
         })     
     }
     async getDataRUS(){
         this.setState({
-            przechowanieLig: await service.getPremjer(),
+            saveData: await service.getPremjer(),
             isLoading: false
         })     
     }
     async getDataPOL(){
         this.setState({
-            przechowanieLig: await service.getEkstraklasa(),
+            saveData: await service.getEkstraklasa(),
             isLoading: false
         })     
     }
 
     renderClubs(){
-        return this.state.przechowanieLig.map((clubs, index) => 
+        return this.state.saveData.map((clubs, index) => 
         {
             return(
-                <View style = {styles.clubsView}>
-                    {/* <Image source = {{uri: clubs.image_url}} key = {index}/> */}
-                    <Text style = {styles.textStyle} key = {index}> {clubs.name}</Text>
-                </View>
+                <TouchableOpacity>
+                    <View style = {styles.clubsView}>
+                        {/* <Image source = {{uri: clubs.image_url}} key = {index}/> */}
+                        <Text style = {styles.textStyle} key = {index}> {clubs.name}</Text>
+                    </View>
+                </TouchableOpacity>
             )
         }
         )
@@ -124,15 +126,15 @@ const styles = StyleSheet.create({
       },
       clubsView: {
         width: '90%',
-        height: 100,
+        height: 110,
         marginLeft: 20,
         borderColor: 'black',
         borderWidth: 2,
         marginTop: 5,
         flex: 1,
-        justifyContent:'center',
+        paddingLeft: 20,
         alignItems:'center',
-        flexDirection:'row'
+        flexDirection:'row',
       },
       imgContainer:{
         width: 60,
@@ -140,6 +142,8 @@ const styles = StyleSheet.create({
         
       },
       textStyle:{
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontSize: 17,
+        paddingLeft: 70
       }
 })

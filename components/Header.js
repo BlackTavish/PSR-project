@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
         
     },
     titlePage:{
+        paddingLeft: 25,
         fontSize:30,
         fontFamily:'Langar-Regular',
     },
