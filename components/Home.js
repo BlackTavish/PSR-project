@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
       imgContainer:{
         width: 70,
         height: 90,
-        
+        resizeMode: 'contain'
       },
       textAlign:{
         fontWeight: 'bold',

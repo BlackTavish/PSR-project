@@ -12,9 +12,10 @@ export default class LeagueScreen extends Component {
         super(props);
         this.state = {
             saveData: null, 
-            isLoading: true
+            isLoading: true,
         };
     }
+
 
     componentDidMount(){
         if(this.props.route.params.leagueFlag === 'PL'){
@@ -95,11 +96,12 @@ export default class LeagueScreen extends Component {
     renderClubs(){
         return this.state.saveData.map((clubs, index) => 
         {
+            console.log(clubs)
             return(
-                <TouchableOpacity>
+                <TouchableOpacity key = {index} onPress = {() => this.props.navigation.navigate('details', {clubs})}>
                     <View style = {styles.clubsView}>
-                        {/* <Image source = {{uri: clubs.image_url}} key = {index}/> */}
-                        <Text style = {styles.textStyle} key = {index}> {clubs.name}</Text>
+                        <Image source={{uri: clubs.image_url}} style = {styles.imgContainer}/>
+                        <Text style = {styles.textStyle}>{clubs.name}</Text>
                     </View>
                 </TouchableOpacity>
             )
@@ -136,14 +138,17 @@ const styles = StyleSheet.create({
         alignItems:'center',
         flexDirection:'row',
       },
-      imgContainer:{
-        width: 60,
-        height: 75,
+     imgContainer:{
+        width:90,
+        height: '90%',
+        resizeMode: 'contain'
         
-      },
+     },
       textStyle:{
         fontWeight: 'bold',
         fontSize: 17,
-        paddingLeft: 70
+        paddingLeft: 30,
+        flex: 1,
+        flexWrap: 'wrap'
       }
 })
