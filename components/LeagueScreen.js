@@ -32,6 +32,15 @@ export default class LeagueScreen extends Component {
         else if(this.props.route.params.leagueFlag === 'L1'){
             this.getDataL1();
         }
+        else if(this.props.route.params.leagueFlag === 'ERV'){
+            this.getDataERV();
+        }
+        else if(this.props.route.params.leagueFlag === 'RUS'){
+            this.getDataRUS();
+        }
+        else if(this.props.route.params.leagueFlag === 'POL'){
+            this.getDataPOL();
+        }
     }
 
     async getDataPL(){
@@ -61,6 +70,24 @@ export default class LeagueScreen extends Component {
     async getDataL1(){
         this.setState({
             przechowanieLig: await service.getLigue1(),
+            isLoading: false
+        })     
+    }
+    async getDataERV(){
+        this.setState({
+            przechowanieLig: await service.getEredivise(),
+            isLoading: false
+        })     
+    }
+    async getDataRUS(){
+        this.setState({
+            przechowanieLig: await service.getPremjer(),
+            isLoading: false
+        })     
+    }
+    async getDataPOL(){
+        this.setState({
+            przechowanieLig: await service.getEkstraklasa(),
             isLoading: false
         })     
     }

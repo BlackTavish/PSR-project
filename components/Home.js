@@ -52,23 +52,27 @@ class Home extends Component{
                     <Text style = {styles.textAlign}>Ligue 1</Text>
                   </View>
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('eredivise', {leagueFlag: 'ERV'})}>
                   <View style = {styles.home}>
                   <Image style = {styles.imgContainer}
                     source = {require('../images/eredivise.png')} />
                     <Text style = {styles.textAlign}>Eredivise</Text>
                   </View>
                 </TouchableOpacity>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('premjer', {leagueFlag: 'RUS'})}>
                   <View style = {styles.home}>
                   <Image style = {styles.imgContainer}
                     source = {require('../images/premjerleague.png')} />
                     <Text style = {styles.textAlign}>Premjer League</Text>
                   </View>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('ekstraklasa', {leagueFlag: 'POL'})}>
                   <View style = {styles.home}>
                   <Image style = {styles.imgContainer}
                     source = {require('../images/ekstraklasa.jpg')} />
                     <Text style = {styles.textAlign}>Ekstraklasa</Text>
                   </View>
+                </TouchableOpacity>
                 </ScrollView>
             </View>
           );

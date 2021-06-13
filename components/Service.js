@@ -55,6 +55,37 @@ export default class Service extends Component {
                 return data;  
             }
         });
+    
+    }
+    getPremjer = async () => {
+        return await fetch(this.baseURL + 'clubsRUS', {method: 'GET', headers: 
+        {Accept: 'application/json', 'Content-Type': 'application/json'}}).then(
+            (response) => {return response.json()}
+        ).then((data) => {
+            if(data){
+                return data;  
+            }
+        });
+    }
+    getEkstraklasa = async () => {
+        return await fetch(this.baseURL + 'clubsPOL', {method: 'GET', headers: 
+        {Accept: 'application/json', 'Content-Type': 'application/json'}}).then(
+            (response) => {return response.json()}
+        ).then((data) => {
+            if(data){
+                return data;  
+            }
+        });
+    }
+    getEredivise = async () => {
+        return await fetch(this.baseURL + 'clubsERV', {method: 'GET', headers: 
+        {Accept: 'application/json', 'Content-Type': 'application/json'}}).then(
+            (response) => {return response.json()}
+        ).then((data) => {
+            if(data){
+                return data;  
+            }
+        });
     }
 
 }

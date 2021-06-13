@@ -62,17 +62,17 @@ class Menu extends Component {
           </Text>
           <Text
             style={styles.button}
-            onPress={() => this.props.navigation.navigate('LeagueScreen')}>
+            onPress={() => this.props.navigation.navigate('eredivise', {leagueFlag: 'ERV'})}>
             Eredivise
           </Text>
           <Text
             style={styles.button}
-            onPress={() => this.props.navigation.navigate('LeagueScreen')}>
+            onPress={() => this.props.navigation.navigate('premjer', {leagueFlag: 'RUS'})}>
             Prejmjer League
           </Text>
           <Text
             style={styles.button}
-            onPress={() => this.props.navigation.navigate('LeagueScreen')}>
+            onPress={() => this.props.navigation.navigate('ekstraklasa', {leagueFlag: 'POL'})}>
             Ekstraklasa
           </Text>
         </Drawer.Section>
