@@ -37,12 +37,12 @@ class Menu extends Component {
          <Drawer.Section style={styles.drawerSectionLower}>
           <Text
             style={styles.button}
-            onPress={() => this.props.navigation.navigate('premierleague', {leagueFlag: 'PL'})}>
+            onPress={() => this.props.navigation.navigate('premier_league', {leagueFlag: 'PL'})}>
             Premier League
           </Text>
           <Text
             style={styles.button}
-            onPress={() => this.props.navigation.navigate('laliga', {leagueFlag: 'LL'})}>
+            onPress={() => this.props.navigation.navigate('la_liga', {leagueFlag: 'LL'})}>
             La Liga
           </Text>
           <Text
@@ -52,12 +52,12 @@ class Menu extends Component {
           </Text>
           <Text
             style={styles.button}
-            onPress={() => this.props.navigation.navigate('seriea', {leagueFlag: 'SA'})}>
+            onPress={() => this.props.navigation.navigate('serie_a', {leagueFlag: 'SA'})}>
             Serie A
           </Text>
           <Text
             style={styles.button}
-            onPress={() => this.props.navigation.navigate('ligue1', {leagueFlag: 'L1'})}>
+            onPress={() => this.props.navigation.navigate('ligue_1', {leagueFlag: 'L1'})}>
             Ligue 1
           </Text>
           <Text
@@ -67,13 +67,28 @@ class Menu extends Component {
           </Text>
           <Text
             style={styles.button}
-            onPress={() => this.props.navigation.navigate('premjer', {leagueFlag: 'RUS'})}>
+            onPress={() => this.props.navigation.navigate('premjer_liga', {leagueFlag: 'RUS'})}>
             Prejmjer League
           </Text>
           <Text
             style={styles.button}
             onPress={() => this.props.navigation.navigate('ekstraklasa', {leagueFlag: 'POL'})}>
             Ekstraklasa
+          </Text>
+          <Text
+            style={styles.button}
+            onPress={() => this.props.navigation.navigate('championship', {leagueFlag: 'CHA'})}>
+            Championship
+          </Text>
+          <Text
+            style={styles.button}
+            onPress={() => this.props.navigation.navigate('nos', {leagueFlag: 'NOS'})}>
+            Liga NOS
+          </Text>
+          <Text
+            style={styles.button}
+            onPress={() => this.props.navigation.navigate('mls', {leagueFlag: 'MLS'})}>
+            MLS
           </Text>
         </Drawer.Section>
       </DrawerContentScrollView>

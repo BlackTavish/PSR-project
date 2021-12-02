@@ -17,14 +17,14 @@ class Home extends Component{
             <View style = {styles.container}>
                 <Header title = "Home Page" navigation = {this.props.navigation} />
                 <ScrollView>
-                <TouchableOpacity onPress={() => this.props.navigation.navigate('premierleague', {leagueFlag: 'PL'})}>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('premier_league', {leagueFlag: 'PL'})}>
                   <View style = {styles.home}>
                     <Image style = {styles.imgContainer}
                     source = {require('../images/premierleague.png')} />
                     <Text style = {styles.textAlign}>Premier League</Text>
                   </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => this.props.navigation.navigate('laliga', {leagueFlag: 'LL'})}> 
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('la_liga', {leagueFlag: 'LL'})}> 
                   <View style = {styles.home}>
                   <Image style = {styles.imgContainer}
                     source = {require('../images/LaLiga.png')} />
@@ -38,28 +38,28 @@ class Home extends Component{
                     <Text style = {styles.textAlign}>Bundesliga</Text>
                   </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => this.props.navigation.navigate('seriea', {leagueFlag: 'SA'})}>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('serie_a', {leagueFlag: 'SA'})}>
                   <View style = {styles.home}>
                   <Image style = {styles.imgContainer}
                     source = {require('../images/serieA.png')} />
                     <Text style = {styles.textAlign}>Serie A</Text>
                   </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => this.props.navigation.navigate('ligue1', {leagueFlag: 'L1'})}>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('ligue_1', {leagueFlag: 'L1'})}>
                   <View style = {styles.home}>
                   <Image style = {styles.imgContainer}
                     source = {require('../images/ligue1.png')} />
                     <Text style = {styles.textAlign}>Ligue 1</Text>
                   </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => this.props.navigation.navigate('eredivise', {leagueFlag: 'ERV'})}>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('eredivisie', {leagueFlag: 'ERV'})}>
                   <View style = {styles.home}>
                   <Image style = {styles.imgContainer}
                     source = {require('../images/eredivisie.png')} />
                     <Text style = {styles.textAlign}>Eredivise</Text>
                   </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => this.props.navigation.navigate('premjer', {leagueFlag: 'RUS'})}>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('premjer_liga', {leagueFlag: 'RUS'})}>
                   <View style = {styles.home}>
                   <Image style = {styles.imgContainer}
                     source = {require('../images/premjerleague.png')} />
@@ -71,6 +71,27 @@ class Home extends Component{
                   <Image style = {styles.imgContainer}
                     source = {require('../images/ekstraklasa.png')} />
                     <Text style = {styles.textAlign}>Ekstraklasa</Text>
+                  </View>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('championship', {leagueFlag: 'CHA'})}>
+                  <View style = {styles.home}>
+                  <Image style = {styles.imgContainer}
+                    source = {require('../images/championship.png')} />
+                    <Text style = {styles.textAlign}>Championship</Text>
+                  </View>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('nos', {leagueFlag: 'NOS'})}>
+                  <View style = {styles.home}>
+                  <Image style = {styles.imgContainer}
+                    source = {require('../images/nos.png')} />
+                    <Text style = {styles.textAlign}>Liga NOS</Text>
+                  </View>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('mls', {leagueFlag: 'MLS'})}>
+                  <View style = {styles.home}>
+                  <Image style = {styles.imgContainer}
+                    source = {require('../images/mls.png')} />
+                    <Text style = {styles.textAlign}>MLS</Text>
                   </View>
                 </TouchableOpacity>
                 </ScrollView>

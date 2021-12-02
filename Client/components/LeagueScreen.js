@@ -42,6 +42,15 @@ export default class LeagueScreen extends Component {
         else if(this.props.route.params.leagueFlag === 'POL'){
             this.getLeagueName("ekstraklasa");
         }
+        else if(this.props.route.params.leagueFlag === 'CHA'){
+            this.getLeagueName("championship");
+        }
+        else if(this.props.route.params.leagueFlag === 'NOS'){
+            this.getLeagueName("nos");
+        }
+        else if(this.props.route.params.leagueFlag === 'MLS'){
+            this.getLeagueName("mls");
+        }
     }
 
 
